@@ -38,9 +38,12 @@ def analyze_resume():
         # Extract text from PDF
         resume_text = extract_text_from_pdf(filepath)
 
+        if not resume_text:
+            return jsonify({"error": "Failed to extract text from PDF"}), 500
+
         response = {
             "message": "Resume analyzed successfully!",
-            "extracted_text": resume_text[:500]  # Show first 500 chars
+            "extracted_text": str(resume_text[:500])  # Ensure it's a string
         }
         return jsonify(response)
 
