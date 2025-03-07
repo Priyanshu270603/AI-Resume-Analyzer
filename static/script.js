@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const loadingDiv = document.getElementById("loading");
     const resumeTextDiv = document.getElementById("resumeText");
 
+    fileInput.addEventListener("change", function() {
+        if (fileInput.files.length > 0) {
+            feedbackDiv.innerHTML = `<p style='color: green;'>📄 ${fileInput.files[0].name} selected</p>`;
+        }
+    });
+
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 

@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Analyzer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
         <h1>Upload Your Resume</h1>
         
         <form id="uploadForm">
-            <label for="resumeInput" class="upload-btn">Choose File</label>
+            <label for="resumeInput" class="upload-btn">📂 Choose File</label>
             <input type="file" id="resumeInput" accept=".pdf" required>
-            <button type="submit">Analyze</button>
+            <button type="submit">🔍 Analyze</button>
         </form>
 
         <div id="feedback"></div>

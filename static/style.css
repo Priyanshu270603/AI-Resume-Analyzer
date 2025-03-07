@@ -11,24 +11,34 @@ body {
     height: 100vh;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 /* Main Container */
 .container {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 30px;
     width: 90%;
     max-width: 500px;
     text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     animation: fadeIn 1s ease-in-out;
+    color: #fff;
 }
 
 /* Heading */
 h1 {
-    color: #fff;
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 15px;
 }
 
@@ -42,11 +52,12 @@ input[type="file"] {
     display: inline-block;
     background: #ffffff;
     color: #333;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 .upload-btn:hover {
@@ -55,10 +66,10 @@ input[type="file"] {
 
 /* Submit Button */
 button {
-    background: #e6825d;
+    background: #ff9800;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 24px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
@@ -68,13 +79,13 @@ button {
 }
 
 button:hover {
-    background: #6fe724;
+    background: #e68a00;
 }
 
 /* Feedback Messages */
 #feedback {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Loading Animation */
@@ -98,19 +109,15 @@ button:hover {
     100% { transform: rotate(360deg); }
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Extracted Resume Text Box */
 .text-box {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
     border-radius: 10px;
     color: #333;
     max-height: 300px;
     overflow-y: auto;
     word-wrap: break-word;
+    text-align: left;
+    white-space: pre-wrap;
 }
