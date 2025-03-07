@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 feedbackDiv.innerHTML = `<p style='color: green;'>✅ ${data.message}</p>`;
                 resumeTextDiv.innerText = data.extracted_text;
+                resumeTextDiv.style.display = "block"; // Ensure text is visible
             }
         })
         .catch(error => {
